@@ -1,0 +1,58 @@
+
+body{
+    background-color: #f8f5ff ;
+    position: relative;
+}
+
+
+/* CUBE EMAIL */
+
+#fleche{
+ font-size: 50px;
+;
+}
+.retour{
+    border-radius:100%;
+    height: 50px;
+    width: 50px;
+    background-color: black;
+}
+.cubemail{
+
+    width: 550px;
+    height: 400px;
+    background-color: white;
+    text-align: center;
+    position: absolute;
+    left: 700px;
+    top: 220px;
+    border-radius: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+
+   
+}
+
+.jecontinue{
+    display:flex;
+    text-align: center;
+    background-color: black;
+    color: white;
+    height: 40px;
+    width: 300px;
+    border-radius: 10px;
+
+}
+#champs{
+    height: 40px;
+    width: 350px;
+    border-radius: 10px;
+
+}
+/* FIN CUBE EMAIL */
+
+.connecter{
+
+    background-color: #77919d ;
+}
