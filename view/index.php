@@ -1,9 +1,17 @@
-<?php include_once "inc/header.php" ?>
+<?php
+// A mettre avant le html c'est pour démarer la session
+session_start();
+var_dump($_SESSION);
+?>
+<?php include_once "inc/header.php"?>
+<body class="fond">
+    <div>
+    <button onclick="window.location.href='connexion.php'"class="connecter" type="button">Se connecter</button>
+    </div>
+    <div>
+    <button onclick="window.location.href='inscription.php'"class="inscription" type="button">Inscription</button>
+    </div>
+</body>
+<?php include_once "inc/footer.php"?>
 
 
-<button class="connecter" type="button",n >Se connecter</button>
-<button class="connecter" type="button">Inscription</button>
-<img src="/view/assets/img/Group5.png" style="width:100%; height:100%;">
-
-
-<?php include_once "inc/footer.php" ?>
