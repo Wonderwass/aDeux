@@ -1,45 +1,87 @@
- 
-/* INDEX */
-.fond{
-    background-image: url(../img/Group5.png);
+/*Importation pou l'icon message */
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/comment.css');
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/bell.css');
+
+/*           PAGE ACCUEIL          */
+/*body, html {
+    margin: 0;
+    padding: 0;
     width: 100%;
     height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
+}*/
+
+.fond {
+    background: url(../img/Group8.jpg) center / 100% 100% no-repeat;
+    width: 100vw;
+    min-width: 100%;
+    height: 100vh;
     position: relative;
-    
 }
-.FndBlancProfil{
-    background-color: white;
-    margin: auto;
-    width: 562px;
-    height: 100%;
-}
+
+
+
 .connecter{
-    background-color: rgba(0,0,0,0);
-    opacity: 0,5;
-    border-radius: 10px;
-    height: 38px;
-    width: 162px;
-    font-size: 16px;
-    color: #e8def6;
+
+    border: none;
+    cursor: pointer;
+    padding: 13.5px 16px;
+    border-radius: 13.6px;
+    line-height: 1.25rem;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    transition: color 0.3s ease-in-out 0s, background-color 0.3s ease-in-out 0s, transform 0.3s ease-in-out 0s;
+    font-family: "LaNord Medium", sans-serif;
+    outline-color: rgb(174, 179, 236);
+    color:white;
+    background-color: black;
+    font-size: 14px;
     position: absolute;
-    right: 10px;
- 
+    right: 182px;
+    margin-top:15px;
 }
-/* Au moment ou survol sur le bouton connecter et incription il change de couleur*/
-.connecter:hover{
-    cursor:pointer;
-    background-color: #e8def6;
-    color: black;
-}
-.inscription:hover{
-    cursor:pointer;
-    background-color: #e8def6;
-    color: black;
-}
-/* Finnnnn*/
+
 .inscription{
+
+    border: none;
+    cursor: pointer;
+    padding: 13.5px 16px;
+    border-radius: 13.6px;
+    line-height: 1.25rem;
+    transition: color 0.3s ease-in-out 0s, background-color 0.3s ease-in-out 0s, transform 0.3s ease-in-out 0s;
+   /* outline-color: rgb(174, 179, 236);*/
+    color: white;
+    background-color: black;
+    font-size: 14px;
+    position: absolute;
+    right: 65px;
+    margin-top: 15px;
+}
+/*.inscription{
+    border: none;
+    cursor: pointer;
+    padding: 13.5px 16px;
+    border-radius: 13.6px;
+    line-height: 1.25rem;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    transition: color 0.3s ease-in-out 0s, background-color 0.3s ease-in-out 0s, transform 0.3s ease-in-out 0s;
+    font-family: "LaNord Medium", sans-serif;
+    outline-color: rgb(174, 179, 236);
+    color: rgb(16, 15, 10);
+    background-color: rgb(255, 255, 255);
+    font-size: 14px;
+    position: absolute;
+    right: 182px;
+}
+
+/*.inscription{
+    margin:10px;
     background-color: rgba(0,0,0,0);
     opacity: 0,5;
     border-radius: 10px;
@@ -49,18 +91,272 @@
     color: #e8def6;
     position: absolute;
     right: 182px;
+}*/
+
+/* Au moment ou survol sur le bouton "connecter" et "incription" il change de couleur*/
+.connecter:hover{
+    cursor:pointer;
+    background-color: #e8def6 ;
+    color: rgb(25, 24, 24);
 }
-/* CUBE EMAIL */
+.inscription:hover{
+    cursor:pointer;
+    background-color: #e8def6 ;
+    color: rgb(25, 24, 24);
+}
+/*            FIN ACCUEIL           */
  
+/*            PAGE CRUSH            */
+
+.FndBlancProfil{
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+    margin:auto;
+    width: 520px;
+    height: 100%;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.FinSwipe{
+  height: 600px;
+  margin-left: 20px;
+  
+}
+
+.FinSwipe img {
+    height:500px;
+    width: 500px;
+}
+
+/*Fond notif message*/
+.notifMessage{
+    height:37px;
+    width: 40px;
+    background-color:black;
+    border-radius: 10px;
+    position: relative;
+    position: absolute;
+    right: 10px;
+}
+/*Fin fond notif message */
+/*icon message */
+  .gg-comment {
+    color: #e8def6;
+    position: absolute;
+    top: 7px;
+    margin: auto;
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 20px;
+    height: 16px;
+    border: 2px solid;
+    border-bottom: 0;
+    box-shadow:
+    -6px 8px 0 -6px,
+     6px 8px 0 -6px
+
+    }
+       
+    .gg-comment::after,
+    .gg-comment::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 8px
+
+    }
+       
+    .gg-comment::before {
+    border: 2px solid;
+    border-top-color: #e8def6;
+    border-bottom-left-radius: 20px;
+    right: 4px;
+    bottom: -6px;
+    height: 6px
+
+    }
+       
+    .gg-comment::after {
+    height: 2px;
+    background: #e8def6;
+    box-shadow: 0 4px 0 0;
+    left: 4px;
+    top: 4px
+
+    } 
+/*Fin icon message*/
+
+/* Redirection Profil */
+.redirectionProfil{
+    height:37px;
+    width:40px;
+    border: solid 2px #ecbd6c;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    position:absolute;
+    right: 53px;
+}
+/*Fin redirection Profil*/
+/*Bouton notif*/
+.notif{
+    height:37px;
+    width:40px;
+    border-radius: 10px;
+    background-color: #ecbd6c;
+    position: absolute;
+    right: 100px;
+
+}
+/*Ici la cloch récuperé*/
+.gg-bell,
+.gg-bell::before {
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px
+}
+
+.gg-bell {
+    color: #0d0c0c;
+    font-size: 20px;
+    position: absolute;
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    border: 2px solid;
+    border-bottom: 0;
+    width: 14px;
+    height: 14px;
+    left: 13px;
+    top: 9px;
+}
+
+.gg-bell::after,
+.gg-bell::before {
+ content: "";
+ display: block;
+ box-sizing: border-box;
+ position: absolute
+}
+
+.gg-bell::before {
+ background: currentColor;
+ width: 4px;
+ height: 4px;
+ top: -4px;
+ left: 3px
+}
+
+.gg-bell::after {
+ border-radius: 3px;
+ width: 16px;
+ height: 10px;
+ border: 6px solid transparent;
+ border-top: 1px solid transparent;
+ box-shadow:
+ inset 0 0 0 4px,
+ 0 -2px 0 0;
+ top: 14px;
+ left: -3px;
+ border-bottom-left-radius: 100px;
+ border-bottom-right-radius: 100px
+} 
+/*FIN BOUTON NOTIF*/
+
+.imgprofil{
+    border-radius: 5px;
+    width: 500px;
+    height: 500px;
+    margin:auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+#coeur{
+    position: absolute;
+    bottom: 1px;
+    right: 5px;
+}
+#recal{
+    position: absolute;
+    bottom: 1px;
+    left: 6px;
+   
+}
+/* Boutonrecal*/
+.crushCubec{
+    background-color: black;
+    height: 57px;
+    width: 60px;
+    right: 194px;
+    bottom: 353px;
+    border-radius: 15px;
+    position: absolute;
+}
+/* Boutoncoeur*/
+.crushCuber{
+    background-color: #0d0c0c;
+    background-color: #0d0c0c;
+    height: 57px;
+    width: 60px;
+    left: 178px;
+    bottom: 353px;
+    border-radius: 15px;
+    position: absolute;
+    }
+
+.txtPk,.age,.intitule{
+    margin-left: 11px;
+
+}
+.age{
+    margin-bottom: 16px;
+    padding-top: 10px;
+    font-size: 20px;
+  
+}
+.txtPk{
+color: gray;
+margin-top: 19px;
+}
+
+.intitule{
+    background-color: #ebebeb;
+    height: 50px;
+    width: 499px;
+    border-radius: 16px;
+   
+}
+.snprofil{
+    background-color: #ebebeb;
+    text-align: center;
+    height: 32px;
+    width: 100px;
+    border-radius: 16px;
+    display: inline-block;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+}
+.intitule p{
+   margin-left: 10px;
+   padding-top:10px;
+   font-size: 20px;
+}
 .pink{
     background-color: #e8def6 ;
     position: relative;
+   
 }
 .pinkprofil{
     background-color: #e8def6 ;
- 
+
 }
- 
 .logo{
     background-image: url(../img/adeuximg.png);
     background-size: 100%;
@@ -71,42 +367,47 @@
     right: 10px;
     top: -30px;
 }
- 
+
 .container {
     height: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+}
   
- 
+
 #fleche{
     font-size: 50px;
     margin:10px;
+    color: black;
 }
+
 .retour{
     border-radius:100%;
     height: 50px;
     width: 50px;
     background-color: black;
 }
+
+/*           INSCRIPTION           */
+
 .cubemail{
- 
+
     width: 479px;
     height: 326px;
     background-color: white;
     border-radius: 20px;
-    font-family: 'Roboto', sans-serif;
     font-size: 25px;
+    font-family: 'Roboto', sans-serif;
     font-weight: bold;
     display: flex;
     flex-direction: column;
     position: absolute;
     left: 481px;
-    top: 157px;
+    top: 157px; 
    
 }
- 
+
 .jecontinue{
     display:flex;
     text-align:end;
@@ -120,11 +421,11 @@
     padding-left: 123px;
     margin-bottom: 19px;
     font-size: 19px;
- 
-    
+    margin-top:20px
+
   
 }
- 
+
 .champs{
     border-radius: 10px;
     height: 40px;
@@ -133,41 +434,32 @@
     font-size: 16px;
     margin-bottom: 25px;
 }
- 
-.champsC{
-    border-radius: 10px;
-    height: 40px;
-    width: 368px;
-    padding-left: 12px;
-    font-size: 16px;
-    margin-top: 20px;
-    margin-left: 22px;
-    margin-bottom: 4px;
-}
- 
+
 .textmail{
     padding-bottom: 25px;
+   
+
 }
- 
-.nom{
-    display: inline-block;
-    margin-right: 10px;
- 
-}
+/* Margin utiliser dans le cub inscription */
 .margin{
     margin:auto;
     text-align:center ;
 }
-/* FIN CUBE EMAIL */
- 
-/*CUBE PASSWORD*/
- 
+
 #textmdp, #txtnom, #password, #txtnom1, #txtprenom1, #prenom, #txtpseudo, #pseudo, #age, #txtage, #sex, #txtsex, #txtpoids, #poids, #txtyeux, #yeux, #txttaille, #taille, #txtcheveux, #cheveux, #txtorigine, #origine, #txtville, #ville, #txtrelation, #relation, #txtreligion, #religion, #txtimg, #photo{
     display: none;
 }
- 
- 
-/*CUB CONNEXION*/
+
+/*         FIN INSCRIPTION       */
+
+.nom{
+    display: inline-block;
+    margin-right: 10px;
+
+}
+
+/*         CUB CONNEXION          */
+
 .cubconnexion{
     width: 435px;
     height: 242px;
@@ -182,4 +474,355 @@
     left: 481px;
     top: 200px;
 }
+
+.champsC{
+    border-radius: 10px;
+    height: 40px;
+    width: 368px;
+    padding-left: 12px;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-left: 35px;
+    margin-bottom: 4px;
+}
+
+/*       FIN CUB CONNEXION      */
+
+/*          LIST CRUSH          */
+.bull-conv{
+    height: 50px;
+    width :50px;
+    border-radius: 100%;
+    background-size: cover;
+    margin-left: 10px;
+    
+}
+.cursor{
+    height: 50px;
+}
+
+#list_crush_conv{
+    display: flex;
+    align-items: center;
+}
+
+#list_crush_conv p {
+    margin: 0 0 0 10px;
+}
+
+#list_crush_conv p span {
+color: pink;
+}
+.FndBlancProfilList{
+    font-family: 'Roboto', sans-serif;
+    color: #221d1d9d;
+    background-color: white;
+    margin:auto;
+    width: 520px;
+    height: 830px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    position: absolute;
+    left: 480px;
+}
+/*        FIN LIST CRUSH        */
+/*        CONVERSATION          */
+#messages-conv {
+    max-height: 4%; /* ou la valeur que vous souhaitez */
+    overflow-y: auto;
+    height:730px;
+    /*margin-left: 15px;
+    margin-right: 15px;*/
+
+}
+
+.bulleConv{
+    height: 50px;
+    width :50px;
+    border-radius: 100%;
+    background-size: cover;
+    margin-left: 10px;
+    
+}
+
+.texto div:first-child{
+    width:75%;
+    input{
+        
+        height:40px;
+        width:100%;                                        
+        border:none;
+        outline: none;
+        margin-left: 11px;
+        
+
+   }
+}
+.texto div:last-child{
+    width: 25%;
+    button{
+        background-color: transparent;
+        margin-left: 10px;
+    }
+}
+
+.bouton-conv{
+    border:none;
+    outline:none;
+   
+   
+}
+
+.bulle {
+    background: #eef8ff;
+    min-width: 50px;
+    padding: 10px;
+    border-radius: 2px;
+    word-break: break-all;
+    margin: O;
+    min-width: auto;
+    max-width: 80%;
+    text-align:left;
+    word-wrap: break-word;
+}
+.otherleft:before {
+    content: "";
+    position: relative;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    width: 0px;
+    height: 0px;
+    border: 5px solid #eef8ff;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+}
+.otherright:after {
+    content: "";
+    position: relative;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    width: 0px;
+    height: 0px;
+    border: 5px solid #eef8ff;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.right {
+    display: flex;
+    justify-content: end;
+    text-align: right;
+    min-height: 50px;
+    margin-right: 5px;
+}
+
+.left {
+    display: flex;
+    justify-content: start;
+    min-height: 50px;
+    margin-left: 5px;
+}
+.texto{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-left: 10px;
+    height: 47px;
+    width: 493px;
+    border-radius: 35px;
+    border: solid black 1px;
+   
+}
+
+
+/* Ajoutez d'autres styles pour chaque type de message au besoin */
+
+/*               FIN CONV              */
+/*               NOTIF                 */
+
+.FndBlancProfilnotif{
+
+    font-family: 'Roboto', sans-serif;
+    color: #221d1d9d;
+    background-color: white;
+    margin:auto;
+    width: 520px;
+    height: 830px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    position: absolute;
+    left: 480px;
+}
+
+.FndBlancProfilnotif p{
+    padding-left: 15px;
+    padding-bottom: 10px;;
+}
+
+/*               FIN NOTIF             */
+
+
+
+/*                                               MEDIA QUERRY                                                                 */
+
+/*              PAGE CRUSH             */
+
+/*    TABLETTE    */
+@media (max-width:600px){
  
+    .imgprofil{
+        width:470px;
+    }
+    .age{
+       margin-left: 10px;
+    }
+  
+    .intitule{
+        width: 450px;
+        /*margin-left:35px;*/
+    }
+    
+    .FndBlancProfil{
+        width: 500px;
+       
+    }
+    }
+
+/*  FIN TABLETTE */
+
+/*  SMARTPHONE   */
+@media(max-width:480px){
+
+    .pink{
+      background-color:none;
+    }
+
+}
+
+/* FIN SMARTPHONE */
+
+/*                  FIN PAGE CRUSH                */
+
+/*                  PAGE CONNEXION                */
+/*   TABLETTE   */
+@media (max-width:600px){
+.cubconnexion{
+    width:380px;
+    height:228px;
+    left:110px;
+    top:230px;
+}
+.champsC{
+    width: 315px;
+    margin-top: 25px;
+
+}
+.jecontinue{
+    padding-left: 106px;
+    height:45px;
+    width:306px;
+    padding: 6px;
+    padding-left: 102px;
+    
+    
+   
+}
+.logo {
+    display: none;
+}
+#fleche{
+    font-size:43px;
+    margin-top:10px;
+}
+}
+/* FIN TABLETTE */
+/*  SMARTPHONE  */
+@media(max-width:480px){
+    .cubconnexion{
+        width:380px;
+        height:228px;
+        left:60px;
+        top:230px;
+    }
+    #fleche{
+        font-size:40px;
+        margin-top:12px;
+    }
+}
+/*FIN SMARTPHONE*/
+
+/*                FIN PAGE CONNEXION              */
+/*                PAGE INSCRIPTION                */
+/*   TABLETTE   */
+@media (max-width:600px){
+.textmail{
+    font-size: 20px;
+}
+.champs{
+    width: 351px;
+}
+.cubemail{
+    width: 417px;
+    height:249px;
+    left: 100px;
+    top:209px;
+}
+.jecontinue{
+    margin-top: 0px;
+}
+#textmdp, #txtnom, #password, #txtnom1, #txtprenom1, #prenom, #txtpseudo, #pseudo, #age, #txtage, #sex, #txtsex, #txtpoids, #poids, #txtyeux, #yeux, #txttaille, #taille, #txtcheveux, #cheveux, #txtorigine, #origine, #txtville, #ville, #txtrelation, #relation, #txtreligion, #religion, #txtimg, #photo{
+    font-size: 18px;
+    margin-bottom: 30px;
+
+}
+}
+/* FIN TABLETTE */
+/*  SMARTPHONE  */
+@media(max-width:480px){
+
+}
+/*FIN SMARTPHONE*/
+
+/*               FIN PAGE INSCRUPTION             */
+/*                 PAGE ACCUEIL                   */
+/*TABLETTE*/
+
+@media (min-width: 769px) {
+   
+}
+
+/* Pour les écrans de taille inférieure ou égale à 768 pixels de large (téléphones portables) */
+@media (max-width: 768px) {
+    .fond {
+        background: url(../img/media.png) center / cover no-repeat;
+    }
+    .connecter{
+        right: 125px;
+        background-color: #ecbd6c;
+        color: white;
+    }
+    .inscription{
+        right:15px;
+        background-color: #ecbd6c;
+        color: white;
+    }
+    .connecter:hover{
+        cursor:pointer;
+        background-color: black ;
+        color: white;
+    }
+    .inscription:hover{
+        cursor:pointer;
+        background-color: black ;
+        color: white;
+    }
+}
+
+/*FIN TABLETTE*/
+/*IMAGE FOND */
+/*                 FIN PAGE ACCUEIL               */
+
+
+
