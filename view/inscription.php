@@ -1,3 +1,9 @@
+<?php include_once($_SERVER['DOCUMENT_ROOT'].'/adeux/view/traitement/action.php') ; 
+//$_SERVER['DOCUMENT_ROOT']envoie le répertoire racine du serveur web, est rajouter le chemin du fichier à inclure.
+$confession = confess(); 
+$typeRelation = relation(); 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,23 +35,23 @@
 <div class="cubemail">
     <div class="margin">
 
-<p id="textmail"class="textmail">Qu'elle est votre address e-mail ?</p>        
-<input class="champs" name="email"type="email" placeholder="Email" id="email" value="test@test.test">
+<p id="textmail"class="textmail">Quelle est votre adresse e-mail ?</p>        
+<input class="champs" name="email"type="email" placeholder="Email" id="email" value="">
 
-<p id="textmdp">Saisie ton mot de passe!</p>
-<input class="champs"  type="password" name="password"placeholder="Mot de passe" id="password" value="test@test.test">
+<p id="textmdp">Saisis ton mot de passe!</p>
+<input class="champs"  type="password" name="password"placeholder="Mot de passe" id="password" value="">
 
-<p id="txtnom1">Qu'elle est ton nom?</p>
-<input class="champs" type="text" name="nom" placeholder="nom" id="txtnom" value="test@test.test">
+<p id="txtnom1">Quel est ton nom?</p>
+<input class="champs" type="text" name="nom" placeholder="nom" id="txtnom" value="">
 
-<p id="txtprenom1">Qu'elle est ton prenom?</p>
-<input class="champs" type="text" name="prenom"placeholder="Prenom"id="prenom" value="test@test.test">
+<p id="txtprenom1">Quel est ton prenom?</p>
+<input class="champs" type="text" name="prenom"placeholder="Prenom"id="prenom" value="">
 
-<p id="txtpseudo">Choisi un pseudo?</p>
-<input type="text" class="champs" name="pseudo" placeholder="Pseudo" id="pseudo" value="test@test.test">
+<p id="txtpseudo">Choisis un pseudo?</p>
+<input type="text" class="champs" name="pseudo" placeholder="Pseudo" id="pseudo" value="">
 
-<p id="txtage">Selectionne t'as date de naissance</p>
-<input type="date" class="champs" name="age" id="age" placeholder="age" value="test@test.test">
+<p id="txtage">Quel est ton age ?</p>
+<input type="number" class="champs" name="age" id="age" placeholder="age" value="">
 
 <p id="txtsex">Vous etes?</p>
 <select class="champs"name="sex" id="sex" placeholder="sex">
@@ -54,9 +60,9 @@
 </select>
 
 <p id="txtpoids">Indique ton poids</p>
-<input type="text" class="champs" name="poids" id="poids" placeholder="70" value="4">
+<input type="text" class="champs" name="poids" id="poids" placeholder="70" value="">
 
-<p id="txtyeux">Quelle es la couleur de tes yeux?</p>
+<p id="txtyeux">Quelle est la couleur de tes yeux?</p>
 <select  type="text" id="yeux" class="champs" name="yeux">
     <option value="noisette">Noisette</option>
     <option value="vert">Vert</option>
@@ -65,10 +71,10 @@
 
 </select>
 
-<p id="txttaille">Qu'elle est ta taille?</p>
+<p id="txttaille">Quelle est ta taille?</p>
 <input type="text" id="taille" class="champs" name="taille"  placeholder="1m70" value="1">
 
-<p id="txtcheveux">Selectionne t'as couleur de cheveux</p>
+<p id="txtcheveux">Selectionne ta couleur de cheveux</p>
 <select type="text" id="cheveux" class="champs" name="cheveux" placeholder="brune">
     <option value="brun">brun(e)</option>
     <option value="blond">blond(e)</option>
@@ -76,17 +82,33 @@
 </select>
 
 <p id="txtorigine">Ton origine?</p>
-<input type="text" id="origine" class="champs" name="origine" placeholder="Marocain" value="test@test.test">
+<input type="text" id="origine" class="champs" name="origine" placeholder="Marocain" value="">
 
-<p id="txtville">De quelle ville est tu ?</p>
-<input type="text" id="ville" class="champs" name="ville" placeholder="Paris" value="test@test.test">
+<p id="txtville">De quelle ville es tu ?</p>
+<input type="text" id="ville" class="champs" name="ville" placeholder="Paris" value="">
 
-<p id="txtrelation">Quelle type de ralation recherche-tu?</p>
-<input type="text" id="relation" class="champs" name="intitulé" placeholder="Du sérieux" value="test@test.test">
+<p id="txtrelation">Quel type de relation recherches-tu?</p>
+<!--<input type="text" id="relation" class="champs" name="intitule" placeholder="Du sérieux" value="">-->
+<select type="text" id="relation" class="champs" name="intitule" placeholder="Du sérieux">
+<?php foreach($typeRelation as $intitule){ ?>
+        <!-- pour chaque elément dans confession il crée une balise option jusqu'au dernier élément -->
+        <option value="<?= $intitule['id_typeRelation'] ?>"><?= $intitule['intitule'] ?></option>
+ <?php } ?>
+
+</select>
 
 
 <p id="txtreligion">De quelle confession es-tu?</p>
-<input type="text" id="religion" class="champs" name="religion" placeholder="religion" value="test@test.test">
+<!--<input type="text" id="religion" class="champs" name="religion" placeholder="religion" value="">-->
+<select name="religion" id="religion" class="champs">
+    <?php foreach($confession as $religion){ ?>
+        <!-- pour chaque elément dans confession il crée une balise option jusqu'au dernier élément -->
+        <option value="<?= $religion['id_confession'] ?>"><?= $religion['religion'] ?></option>
+    <?php } ?>
+</select>
+
+<p id="txtimg">Télécharger une photo de profil :</p>
+<input type="file" name="photo" id="photo" class="champs" placeholder="T'as photo">
 
 
 <button class="jecontinue" type="submit" value="submit" id="submit" name="inscription">Je continue</button>

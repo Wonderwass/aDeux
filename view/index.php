@@ -1,7 +1,6 @@
 <?php
 // A mettre avant le html c'est pour démarer la session
 session_start();
-var_dump($_SESSION);
 ?>
 <?php include_once "inc/header.php"?>
 <body class="fond">
