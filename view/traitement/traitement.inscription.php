@@ -1,10 +1,9 @@
 <?php
-session_start();
+
 require_once("../../model/database.php");
 
 if (isset($_POST["inscription"])) {
-    //recuperer les info saisies par le user
-
+   
     // Récupérer les informations saisies par l'utilisateur
     //htmlspecialchars permet de traduire en text  , une fonction par defaut et de type tableau associatif 
     $email = htmlspecialchars($_POST["email"]);
@@ -32,9 +31,9 @@ if (isset($_POST["inscription"])) {
     //il recupere sont emplacement 
     $tmpName = $photo['tmp_name'];
     //var_dump($tmpName);die;
-//var_dump($_POST);
-//var_dump($photo);
-// ici on lui indique l'emplacement de l'image 
+    //var_dump($_POST);
+    //var_dump($photo);
+    // ici on lui indique l'emplacement de l'image 
     $destination = $_SERVER["DOCUMENT_ROOT"] .
         '/aDeux/view/assets/img/' . $imgName;
         // move_uploaded_file est une fonction qui permet de  deplacer l'image d'un emplaceemnt un à un autre 
@@ -42,9 +41,9 @@ if (isset($_POST["inscription"])) {
  
         //etablir la connexion avec la base de données
         
-       // die('ok');
-    //}
-    //executer la requete
+        // die('ok');
+        //}
+        //executer la requete
         $dbConexion = dbConexion();
         //preparer la requete
         $request = $dbConexion->prepare("INSERT INTO utilisateur (email, pseudo, password, nom, prenom, age, sex, poids, yeux, taille, cheveux, origine, ville, photo, id_confession, id_intitule) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?)");

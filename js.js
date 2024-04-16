@@ -119,6 +119,7 @@ $(document).ready(function () {
   }
 
   $("#coeur-coeur").click(function (e) {
+    //fonctoion javascript, qui empeche le comportement par defauts d'un élément html 
     e.preventDefault();
     // Récupérer les ID de l'utilisateur actuel et de l'utilisateur ciblé
     var idUtilisateurCible = $(this).data("user-crush"); // Remplacez cela par la manière dont vous obtenez l'ID de l'utilisateur cible

@@ -111,7 +111,7 @@ $typeRelation = relation();
 <input type="file" name="photo" id="photo" class="champs" placeholder="T'as photo">
 
 
-<button class="jecontinue" type="submit" value="submit" id="submit" name="inscription">Je continue</button>
+<button class="jecontinue1" type="submit" value="submit" id="submit" name="inscription">Je continue</button>
 </div>
 </div>
 </form>

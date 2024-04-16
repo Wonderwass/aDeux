@@ -1,58 +1,58 @@
 <?php
 session_start();
-include_once("inc/header.php");
+// on à nimporté le fichier js.js dans le fichier header grace à cette action le fichier js est crush .php peuvent échanger les informations
+require_once("inc/header.php");
 include_once("./view/traitement/traitement.connexion.php");
 include_once("./traitement/action.php");
 include_once("./model/database.php");
 $id = $_SESSION['id_user'];
 $profilAleat = aleatUser();
-// Pour rediriger l'utilisateur vers la page connexion si mon utilisateur n'es pas connecté 
+$likedId = crushLiked();
+// Pour rediriger l'utilisateur vers la page connexion si mon utilisateur n'es pas connecté (la fonction empty(). Si elle est vide)
 if (empty($_SESSION["id_user"])) {
     header("Location:connexion.php");
 }
-$likedId = crushLiked();
-var_dump($_SESSION['utilisateurs_deja_vus' . $_SESSION['id_user']]);
-//var_dump($likedId);
-//var_dump($_SESSION['utilisateurs_deja_vus' . $_SESSION['id_user']]);
-//var_dump($_SESSION['pleine_' . $_SESSION['id_user']]);
-//var_dump($_SESSION['profil_disponible_' . $_SESSION['id_user']]);
-//var_dump($_SESSION);
 
-//Détruit une variable:
-//unset($_SESSION['utilisateurs_deja_vus' . $_SESSION['id_user']]);
-//unset($_SESSION['vide_' . $_SESSION['id_user']]);
-//echo "<pre>";
-//var_dump($profilAleat);
-//echo "</pre>";
 ?>
-
 <body class="pink">
+
     <div class="FndBlancProfil">
-        <?php if (isset($_SESSION['pleine_' . $_SESSION['id_user']])) { ?>
+            <!--si l'utilisateur est connecté , execute le code -->
+             <?php if (isset($_SESSION['pleine_' . $_SESSION['id_user']])) { ?>
             <!--Ici on redirige ver la page notif-->
-            <div class="conversations_crush">
+            
+            <div class="conversations_crush">  
+                <button class="logout"> 
+                <a href="connexion.php" class="gg-log-off"></a>
+                </button>
+                 <!--Ici on redirige vers la page de conversation -->
                 <a href="notif.php?idCible=<?= implode(',', $likedId) ?>" class="notif"><i class="gg-bell"></i> </a>
-                <!--Ici on redirige vers la page de conversation -->
                 <a class="notifMessage" href="list_crush_conv.php?idCible=<?= implode(',', $likedId) ?>">
                     <i class="gg-comment"></i>
                 </a>
                 <!--Ici on redirige avec le bouton redirectionProfil , vers le profil de l'utilisateur connecté 
-     href redirige vers la page profil, grace a $_SESSION il recupere l& photo de l'utilisateur connecté-->
+                 href redirige vers la page profil, grace a $_SESSION il recupere l& photo de l'utilisateur connecté-->
                 <a href="profil.php" class="redirectionProfil" style="background-image: url('assets/img/<?= $_SESSION['photo'] ?>');"></a>
             </div>
             <div class="FinSwipe">
                 <img src="assets/img/robot.rose-removebg-preview.png" alt="icons-robot">
                 <h1 id="phrase_robot"></h1>
             </div>
-        <?php } else if ($_SESSION['profil_disponible_' . $_SESSION['id_user']]) { ?>
+             <?php } else if ($_SESSION['profil_disponible_' . $_SESSION['id_user']]) {  
+
+?>
+
             <!--Ici on redirige ver la page notif-->
+                <button class="logout">
+                <a href="connexion.php" class="gg-log-off"></a>
+                </button>
             <a href="notif.php?idCible=<?= implode(',', $likedId) ?>" class="notif"><i class="gg-bell"></i> </a>
             <!--Ici on redirige vers la page de conversation -->
             <a class="notifMessage" href="list_crush_conv.php?idCible=<?= implode(',', $likedId) ?>">
                 <i class="gg-comment"></i>
             </a>
             <!--Ici on redirige avec le bouton redirectionProfil , vers le profil de l'utilisateur connecté 
-href redirige vers la page profil, grace a $_SESSION il recupere l& photo de l'utilisateur connecté-->
+            href redirige vers la page profil, grace a $_SESSION il recupere l& photo de l'utilisateur connecté-->
             <a href="profil.php" class="redirectionProfil" style="background-image: url('assets/img/<?= $_SESSION['photo'] ?>');"></a>
 
             <div class="age">
@@ -95,4 +95,4 @@ href redirige vers la page profil, grace a $_SESSION il recupere l& photo de l'u
 
     <?php
     include_once("inc/footer.php");
-    ?>
+?>  

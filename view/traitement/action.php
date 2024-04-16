@@ -40,7 +40,7 @@ function aleatUser()
         // Ajoutez l'utilisateur à la liste des utilisateurs déjà vus
         $_SESSION['utilisateurs_deja_vus' . $_SESSION['id_user']][] = $id_user;
     }
-
+    //
     $utilisateurs_deja_vus = implode(",", $_SESSION['utilisateurs_deja_vus' . $_SESSION['id_user']]);
     $request = $db->prepare("SELECT utilisateur.*, confession.religion AS religion, typerelation.intitule AS relation
     FROM utilisateur

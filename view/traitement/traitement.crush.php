@@ -1,14 +1,24 @@
 <?php
-session_start();
+//session_start();
 require_once($_SERVER['DOCUMENT_ROOT'] . "/aDeux/model/database.php");
 include_once("action.php");
 const HTTP_OK = 200;
 const HTTP_BAD_REQUEST = 400;
 const HTTP_METHOD_NOT_ALLOWED = 405;
 
+
+//Si la méthod est post et que l'action est like parametré  avec ajax
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['action'] === "like") {
     $db = dbConexion();
+    // je declare une variable  ,  qui a était parmetré dans ajax  si l'utilisateur est connécté tu le met dans la variable sinon elle est null 
     $idUtilisateurActuel = isset($_SESSION["id_user"]) ? $_SESSION["id_user"] : null;
+    /* if(isset($_SESSION["id_user"])){
+        $idUtilisateurActuel = $_SESSION["id_user"];
+    } else {
+        $idUtilisateurActuel = null;
+    }*/
+    //
+    // je declare une variable  ,  qui a était parmetré dans ajax  si l'utilisateur est connécté tu le met dans la variable sinon elle est null
     $idUtilisateurCible = isset($_POST['idUtilisateurCible']) ? $_POST['idUtilisateurCible'] : null;
 
     try {
@@ -27,6 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['action'] === "like") {
                     WHERE id_user = ? AND id_user_cible = ? AND statut = "En Attente"
                 )
         ');
+
         $request->execute([$idUtilisateurActuel, $idUtilisateurCible, $idUtilisateurCible, $idUtilisateurActuel]);
         $crush = $request->fetchAll(PDO::FETCH_ASSOC);
         if ($crush) {

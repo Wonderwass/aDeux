@@ -1,7 +1,8 @@
 /*Importation pou l'icon message */
 @import url('https://unpkg.com/css.gg@2.0.0/icons/css/comment.css');
 @import url('https://unpkg.com/css.gg@2.0.0/icons/css/bell.css');
-
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/log-off.css');
+ 
 /*           PAGE ACCUEIL          */
 /*body, html {
     margin: 0;
@@ -9,7 +10,11 @@
     width: 100%;
     height: 100%;
 }*/
-
+ 
+body{
+    min-height: 100vh;
+}
+ 
 .fond {
     background: url(../img/Group8.jpg) center / 100% 100% no-repeat;
     width: 100vw;
@@ -17,11 +22,11 @@
     height: 100vh;
     position: relative;
 }
-
-
-
+ 
+ 
+ 
 .connecter{
-
+ 
     border: none;
     cursor: pointer;
     padding: 13.5px 16px;
@@ -42,16 +47,15 @@
     right: 182px;
     margin-top:15px;
 }
-
+ 
 .inscription{
-
+ 
     border: none;
     cursor: pointer;
     padding: 13.5px 16px;
     border-radius: 13.6px;
     line-height: 1.25rem;
     transition: color 0.3s ease-in-out 0s, background-color 0.3s ease-in-out 0s, transform 0.3s ease-in-out 0s;
-   /* outline-color: rgb(174, 179, 236);*/
     color: white;
     background-color: black;
     font-size: 14px;
@@ -59,39 +63,6 @@
     right: 65px;
     margin-top: 15px;
 }
-/*.inscription{
-    border: none;
-    cursor: pointer;
-    padding: 13.5px 16px;
-    border-radius: 13.6px;
-    line-height: 1.25rem;
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    justify-content: center;
-    transition: color 0.3s ease-in-out 0s, background-color 0.3s ease-in-out 0s, transform 0.3s ease-in-out 0s;
-    font-family: "LaNord Medium", sans-serif;
-    outline-color: rgb(174, 179, 236);
-    color: rgb(16, 15, 10);
-    background-color: rgb(255, 255, 255);
-    font-size: 14px;
-    position: absolute;
-    right: 182px;
-}
-
-/*.inscription{
-    margin:10px;
-    background-color: rgba(0,0,0,0);
-    opacity: 0,5;
-    border-radius: 10px;
-    height: 38px;
-    width: 162px;
-    font-size: 16px;
-    color: #e8def6;
-    position: absolute;
-    right: 182px;
-}*/
 
 /* Au moment ou survol sur le bouton "connecter" et "incription" il change de couleur*/
 .connecter:hover{
@@ -107,7 +78,7 @@
 /*            FIN ACCUEIL           */
  
 /*            PAGE CRUSH            */
-
+ 
 .FndBlancProfil{
     font-family: 'Roboto', sans-serif;
     background-color: white;
@@ -118,18 +89,55 @@
     padding-bottom: 20px;
     position: relative;
 }
-
+ 
 .FinSwipe{
-  height: 600px;
-  margin-left: 20px;
-  
+    height: 600px;
+    margin-left: 20px;
+ 
 }
-
+ 
 .FinSwipe img {
     height:500px;
     width: 500px;
 }
+ 
+/*icon deconnexion*/
 
+.logout{
+    height:37px;
+    width: 40px;
+    background-color:black;
+    border-radius: 10px;
+    position: absolute;
+    right: 28%;
+    border: none;
+}
+
+.gg-log-off {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    border-radius: 16px;
+    border: 2px solid;
+    transform: scale(var(--ggs,1));
+    width: 16px;
+    height: 16px;
+    left: 5px;
+    border-top: 2px solid transparent
+}
+.gg-log-off::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    border-radius: 3px;
+    height: 8px;
+    width: 2px;
+    background: currentColor;
+    left: 5px;
+    bottom: 6px
+}
+/*fin icon deconnexion*/
 /*Fond notif message*/
 .notifMessage{
     height:37px;
@@ -158,7 +166,7 @@
     box-shadow:
     -6px 8px 0 -6px,
      6px 8px 0 -6px
-
+ 
     }
        
     .gg-comment::after,
@@ -168,7 +176,7 @@
     box-sizing: border-box;
     position: absolute;
     width: 8px
-
+ 
     }
        
     .gg-comment::before {
@@ -178,7 +186,7 @@
     right: 4px;
     bottom: -6px;
     height: 6px
-
+ 
     }
        
     .gg-comment::after {
@@ -187,10 +195,10 @@
     box-shadow: 0 4px 0 0;
     left: 4px;
     top: 4px
-
-    } 
+ 
+    }
 /*Fin icon message*/
-
+ 
 /* Redirection Profil */
 .redirectionProfil{
     height:37px;
@@ -211,7 +219,7 @@
     background-color: #ecbd6c;
     position: absolute;
     right: 100px;
-
+ 
 }
 /*Ici la cloch récuperé*/
 .gg-bell,
@@ -219,7 +227,7 @@
     border-top-left-radius: 100px;
     border-top-right-radius: 100px
 }
-
+ 
 .gg-bell {
     color: #0d0c0c;
     font-size: 20px;
@@ -235,39 +243,41 @@
     left: 13px;
     top: 9px;
 }
-
+ 
 .gg-bell::after,
 .gg-bell::before {
- content: "";
- display: block;
- box-sizing: border-box;
- position: absolute
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute
 }
-
+ 
 .gg-bell::before {
- background: currentColor;
- width: 4px;
- height: 4px;
- top: -4px;
- left: 3px
+    background: currentColor;
+    width: 4px;
+    height: 4px;
+    top: -4px;
+    left: 3px
 }
-
+ 
 .gg-bell::after {
- border-radius: 3px;
- width: 16px;
- height: 10px;
- border: 6px solid transparent;
- border-top: 1px solid transparent;
- box-shadow:
- inset 0 0 0 4px,
- 0 -2px 0 0;
- top: 14px;
- left: -3px;
- border-bottom-left-radius: 100px;
- border-bottom-right-radius: 100px
-} 
+    border-radius: 3px;
+    width: 16px;
+    height: 10px;
+    border: 6px solid transparent;
+    border-top: 1px solid transparent;
+    box-shadow:
+    inset 0 0 0 4px,
+    0 -2px 0 0;
+    top: 14px;
+    left: -3px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px
+}
 /*FIN BOUTON NOTIF*/
 
+
+ 
 .imgprofil{
     border-radius: 5px;
     width: 500px;
@@ -275,7 +285,7 @@
     margin:auto;
     background-size: cover;
     background-repeat: no-repeat;
-
+ 
 }
 #coeur{
     position: absolute;
@@ -309,22 +319,22 @@
     border-radius: 15px;
     position: absolute;
     }
-
+ 
 .txtPk,.age,.intitule{
     margin-left: 11px;
-
+ 
 }
 .age{
     margin-bottom: 16px;
     padding-top: 10px;
     font-size: 20px;
-  
+ 
 }
 .txtPk{
 color: gray;
 margin-top: 19px;
 }
-
+ 
 .intitule{
     background-color: #ebebeb;
     height: 50px;
@@ -350,12 +360,13 @@ margin-top: 19px;
 }
 .pink{
     background-color: #e8def6 ;
-    position: relative;
+    min-height: 100vh;
+    /*position: relative;*/
    
 }
 .pinkprofil{
     background-color: #e8def6 ;
-
+ 
 }
 .logo{
     background-image: url(../img/adeuximg.png);
@@ -365,129 +376,173 @@ margin-top: 19px;
     background-repeat: no-repeat;
     position: absolute;
     right: 10px;
-    top: -30px;
+    top: 0px;
 }
-
+ 
 .container {
     height: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-  
-
-#fleche{
+ 
+ 
+#fleche {
     font-size: 50px;
-    margin:10px;
+    margin: 28px;
     color: black;
 }
-
+ 
 .retour{
     border-radius:100%;
     height: 50px;
     width: 50px;
     background-color: black;
 }
-
+ 
 /*           INSCRIPTION           */
 
-.cubemail{
 
-    width: 479px;
-    height: 326px;
-    background-color: white;
-    border-radius: 20px;
-    font-size: 25px;
+.cubemail{
+    
     font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    width: 459px;
+    height: 282px;
+    background-color: white;
+    border-radius: 44px;
     font-weight: bold;
     display: flex;
     flex-direction: column;
-    position: absolute;
-    left: 481px;
-    top: 157px; 
-   
 }
 
+
+
+ 
+.jecontinue1{
+    display:flex;
+    border: none;
+    background-color: black;
+    color: white;
+    height: 47px;
+    width: 365px;
+    border-radius: 17px;
+    margin: auto;
+    padding: 10px;
+    padding-left: 123px;
+    font-size: 19px;
+    margin-top:5px;
+ 
+ 
+}
+
+.jecontinue1:hover{
+    cursor:pointer;
+    background-color:rgb(25, 24, 24) ;
+    color: #e8def6;
+}
+ 
+.champs{
+    border-radius: 15px;
+    height: 40px;
+    width: 360px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-bottom: 17px;
+    border: solid #433d3d;
+}
+ 
+/*.textmail{
+    /*padding-bottom: 25px;
+   
+ 
+} */
+/* Margin utiliser dans le cub inscription */
+.margin{
+    margin-top:36px;
+    text-align:center ;
+}
+ 
+#textmdp, #txtnom, #password, #txtnom1, #txtprenom1, #prenom, #txtpseudo, #pseudo, #age, #txtage, #sex, #txtsex, #txtpoids, #poids, #txtyeux, #yeux, #txttaille, #taille, #txtcheveux, #cheveux, #txtorigine, #origine, #txtville, #ville, #txtrelation, #relation, #txtreligion, #religion, #txtimg, #photo{
+    display: none;
+}
+ 
+/*         FIN INSCRIPTION       */
+ 
+.nom{
+    display: inline-block;
+    margin-right: 10px;
+ 
+}
+ 
+/*         CUB CONNEXION          */
+ 
+.cubconnexion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+}
+ 
+.cubconnexion form {
+    width: 435px;
+    height: 242px;
+    background-color: white;
+    border-radius: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+}
+ 
+.champsC {
+    border: solid #24212196;
+    border-radius: 14px;
+    height: 40px;
+    width: 362px;
+    padding-left: 12px;
+    font-size: 16px;
+    margin-top: 39px;
+    margin-left: 35px;
+    margin-bottom: 3px;
+}
+.champsC2 {
+    border: solid #24212196;
+    border-radius: 14px;
+    height: 40px;
+    width: 362px;
+    padding-left: 12px;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-left: 35px;
+    
+}
 .jecontinue{
     display:flex;
+    border: none;
     text-align:end;
     background-color: black;
     color: white;
     height: 47px;
     width: 365px;
-    border-radius: 10px;
+    border-radius: 17px;
     margin: auto;
     padding: 8px;
     padding-left: 123px;
-    margin-bottom: 19px;
+    /*margin-bottom: 19px;*/
     font-size: 19px;
     margin-top:20px
-
-  
+ 
+ 
 }
 
-.champs{
-    border-radius: 10px;
-    height: 40px;
-    width: 388px;
-    padding-left:10px ;
-    font-size: 16px;
-    margin-bottom: 25px;
+.jecontinue:hover{
+    cursor:pointer;
+    background-color:rgb(25, 24, 24) ;
+    color: #e8def6;
 }
-
-.textmail{
-    padding-bottom: 25px;
-   
-
-}
-/* Margin utiliser dans le cub inscription */
-.margin{
-    margin:auto;
-    text-align:center ;
-}
-
-#textmdp, #txtnom, #password, #txtnom1, #txtprenom1, #prenom, #txtpseudo, #pseudo, #age, #txtage, #sex, #txtsex, #txtpoids, #poids, #txtyeux, #yeux, #txttaille, #taille, #txtcheveux, #cheveux, #txtorigine, #origine, #txtville, #ville, #txtrelation, #relation, #txtreligion, #religion, #txtimg, #photo{
-    display: none;
-}
-
-/*         FIN INSCRIPTION       */
-
-.nom{
-    display: inline-block;
-    margin-right: 10px;
-
-}
-
-/*         CUB CONNEXION          */
-
-.cubconnexion{
-    width: 435px;
-    height: 242px;
-    background-color: white;
-    border-radius: 20px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 25px;
-    font-weight: bold;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    left: 481px;
-    top: 200px;
-}
-
-.champsC{
-    border-radius: 10px;
-    height: 40px;
-    width: 368px;
-    padding-left: 12px;
-    font-size: 16px;
-    margin-top: 20px;
-    margin-left: 35px;
-    margin-bottom: 4px;
-}
-
+ 
 /*       FIN CUB CONNEXION      */
-
+ 
 /*          LIST CRUSH          */
 .bull-conv{
     height: 50px;
@@ -495,21 +550,21 @@ margin-top: 19px;
     border-radius: 100%;
     background-size: cover;
     margin-left: 10px;
-    
+   
 }
 .cursor{
     height: 50px;
 }
-
+ 
 #list_crush_conv{
     display: flex;
     align-items: center;
 }
-
+ 
 #list_crush_conv p {
     margin: 0 0 0 10px;
 }
-
+ 
 #list_crush_conv p span {
 color: pink;
 }
@@ -533,29 +588,29 @@ color: pink;
     height:730px;
     /*margin-left: 15px;
     margin-right: 15px;*/
-
+ 
 }
-
+ 
 .bulleConv{
     height: 50px;
     width :50px;
     border-radius: 100%;
     background-size: cover;
     margin-left: 10px;
-    
+   
 }
-
+ 
 .texto div:first-child{
     width:75%;
     input{
-        
+       
         height:40px;
         width:100%;                                        
         border:none;
         outline: none;
         margin-left: 11px;
-        
-
+       
+ 
    }
 }
 .texto div:last-child{
@@ -565,14 +620,14 @@ color: pink;
         margin-left: 10px;
     }
 }
-
+ 
 .bouton-conv{
     border:none;
     outline:none;
    
    
 }
-
+ 
 .bulle {
     background: #eef8ff;
     min-width: 50px;
@@ -609,7 +664,7 @@ color: pink;
     border-right-color: transparent;
     border-bottom-color: transparent;
 }
-
+ 
 .right {
     display: flex;
     justify-content: end;
@@ -617,7 +672,7 @@ color: pink;
     min-height: 50px;
     margin-right: 5px;
 }
-
+ 
 .left {
     display: flex;
     justify-content: start;
@@ -635,15 +690,15 @@ color: pink;
     border: solid black 1px;
    
 }
-
-
+ 
+ 
 /* Ajoutez d'autres styles pour chaque type de message au besoin */
-
+ 
 /*               FIN CONV              */
 /*               NOTIF                 */
-
+ 
 .FndBlancProfilnotif{
-
+ 
     font-family: 'Roboto', sans-serif;
     color: #221d1d9d;
     background-color: white;
@@ -655,20 +710,20 @@ color: pink;
     position: absolute;
     left: 480px;
 }
-
+ 
 .FndBlancProfilnotif p{
     padding-left: 15px;
     padding-bottom: 10px;;
 }
-
+ 
 /*               FIN NOTIF             */
-
-
-
+ 
+ 
+ 
 /*                                               MEDIA QUERRY                                                                 */
-
+ 
 /*              PAGE CRUSH             */
-
+ 
 /*    TABLETTE    */
 @media (max-width:600px){
  
@@ -678,33 +733,33 @@ color: pink;
     .age{
        margin-left: 10px;
     }
-  
+ 
     .intitule{
         width: 450px;
         /*margin-left:35px;*/
     }
-    
+   
     .FndBlancProfil{
         width: 500px;
        
     }
     }
-
+ 
 /*  FIN TABLETTE */
-
+ 
 /*  SMARTPHONE   */
 @media(max-width:480px){
-
+ 
     .pink{
       background-color:none;
     }
-
+ 
 }
-
+ 
 /* FIN SMARTPHONE */
-
+ 
 /*                  FIN PAGE CRUSH                */
-
+ 
 /*                  PAGE CONNEXION                */
 /*   TABLETTE   */
 @media (max-width:600px){
@@ -717,20 +772,26 @@ color: pink;
 .champsC{
     width: 315px;
     margin-top: 25px;
-
+ 
 }
-.jecontinue{
-    padding-left: 106px;
-    height:45px;
-    width:306px;
-    padding: 6px;
-    padding-left: 102px;
-    
-    
-   
-}
+.jecontinue {
+    border: none;
+    display: flex;
+    text-align: end;
+    background-color: black;
+    color: white;
+    height: 47px;
+    width: 365px;
+    border-radius: 16px;
+    margin: auto;
+    padding: 8px;
+    padding-left: 123px;
+    margin-bottom: 19px;
+    font-size: 19px;
+    margin-top: 20px;
+} 
 .logo {
-    display: none;
+    display:none;
 }
 #fleche{
     font-size:43px;
@@ -752,7 +813,7 @@ color: pink;
     }
 }
 /*FIN SMARTPHONE*/
-
+ 
 /*                FIN PAGE CONNEXION              */
 /*                PAGE INSCRIPTION                */
 /*   TABLETTE   */
@@ -775,24 +836,24 @@ color: pink;
 #textmdp, #txtnom, #password, #txtnom1, #txtprenom1, #prenom, #txtpseudo, #pseudo, #age, #txtage, #sex, #txtsex, #txtpoids, #poids, #txtyeux, #yeux, #txttaille, #taille, #txtcheveux, #cheveux, #txtorigine, #origine, #txtville, #ville, #txtrelation, #relation, #txtreligion, #religion, #txtimg, #photo{
     font-size: 18px;
     margin-bottom: 30px;
-
+ 
 }
 }
 /* FIN TABLETTE */
 /*  SMARTPHONE  */
 @media(max-width:480px){
-
+ 
 }
 /*FIN SMARTPHONE*/
-
+ 
 /*               FIN PAGE INSCRUPTION             */
 /*                 PAGE ACCUEIL                   */
 /*TABLETTE*/
-
+ 
 @media (min-width: 769px) {
    
 }
-
+ 
 /* Pour les écrans de taille inférieure ou égale à 768 pixels de large (téléphones portables) */
 @media (max-width: 768px) {
     .fond {
@@ -819,10 +880,11 @@ color: pink;
         color: white;
     }
 }
-
+ 
 /*FIN TABLETTE*/
 /*IMAGE FOND */
 /*                 FIN PAGE ACCUEIL               */
-
-
-
+ 
+ 
+ 
+ 
